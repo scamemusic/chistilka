@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Чистилка — уборка мусора Windows</title>
+<meta name="description" content="Чистилка: уборка кэша и временных файлов Windows. Скачал, распаковал, запустил.">
+<link rel="icon" href="icon.png">
+<style>
+  :root { --bg:#04060d; --card:#0d1120; --line:#232a44; --text:#eef1fb; --dim:#8f98b8; --a:#7c8cff; --b:#6ff0c8; }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; min-height:100vh; color:var(--text); background:var(--bg);
+    background-image:
+      radial-gradient(60rem 30rem at 15% -10%, rgba(124,140,255,.22), transparent 60%),
+      radial-gradient(50rem 28rem at 100% 10%, rgba(111,240,200,.12), transparent 60%);
+    background-repeat:no-repeat;
+    font:16px/1.55 "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  }
+  main { max-width:760px; margin:0 auto; padding:56px 16px 64px; }
+  header { display:flex; align-items:center; gap:16px; }
+  header img { width:64px; height:64px; border-radius:16px; }
+  h1 { margin:0; font-size:36px; line-height:1.1; letter-spacing:-.02em; }
+  .sub { margin:4px 0 0; color:var(--dim); }
+  .btn {
+    display:inline-flex; align-items:center; gap:10px; margin:32px 0 8px;
+    padding:16px 28px; border-radius:999px; text-decoration:none;
+    font-weight:700; font-size:18px; color:#06101c;
+    background:linear-gradient(90deg, var(--a), var(--b));
+    box-shadow:0 10px 40px rgba(124,140,255,.35);
+  }
+  .btn:hover { filter:brightness(1.08); }
+  .btn:focus-visible { outline:3px solid #fff; outline-offset:3px; }
+  .meta { margin:0; color:var(--dim); font-size:14px; }
+  ol {
+    margin:32px 0; padding:20px 20px 20px 44px;
+    background:var(--card); border:1px solid var(--line); border-radius:20px;
+  }
+  li { margin:8px 0; }
+  li::marker { color:var(--b); font-weight:700; }
+  code { padding:2px 7px; border-radius:7px; background:#171d33; font:14px Consolas, monospace; overflow-wrap:anywhere; }
+  .shot { display:block; width:100%; height:auto; border-radius:16px; border:1px solid var(--line); }
+  .note { margin:24px 0 0; color:var(--dim); font-size:14px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="icon.png" alt="">
+    <div>
+      <h1>Чистилка</h1>
+      <p class="sub">Кэш, временные файлы и прочий хлам Windows</p>
+    </div>
+  </header>
+
+  <a class="btn" href="https://github.com/scamemusic/chistilka/releases/latest/download/Chistilka.zip">Скачать Чистилку</a>
+  <p class="meta">zip, 13 МБ · Windows 10/11 · установка не нужна</p>
+
+  <ol>
+    <li>Скачай архив и распакуй его: правой кнопкой → «Извлечь все».</li>
+    <li>Открой папку <code>Чистилка</code> и дважды кликни <code>Запустить Чистилку.bat</code>.</li>
+    <li>Если Windows спросит, запускать ли файл из интернета, — нажми «Запустить».</li>
+  </ol>
+
+  <img class="shot" src="screenshot.png" alt="Окно Чистилки: свободное место на дисках и найденный мусор по группам" width="1280" height="880">
+
+  <p class="note">По умолчанию всё удаляется в Корзину, так что промах можно откатить. Личные папки программа не трогает. Python внутри архива свой, на компьютер ничего не ставится.</p>
+</main>
+</body>
+</html>
